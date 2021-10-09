@@ -5,9 +5,11 @@ import { Route } from 'react-router-dom';
 
 import { saveItem, KEYS } from '../../utils/local-storage';
 
-export const PublicRoute = ({ component:Component, ...rest }) => {
+export const PublicRoute = ({ trackPath = true, component:Component, ...rest }) => {
 
-  saveItem(KEYS.lastPath, rest.location.pathname);
+  if (trackPath) {
+    saveItem(KEYS.lastPath, rest.location.pathname);
+  }
 
   return(
     <Route { ...rest }
@@ -17,5 +19,6 @@ export const PublicRoute = ({ component:Component, ...rest }) => {
 }
 
 PublicRoute.propTypes = {
+  trackPath: PropTypes.bool,
   component: PropTypes.func.isRequired
 }

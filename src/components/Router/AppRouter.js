@@ -1,21 +1,19 @@
 import {
-  BrowserRouter as Router, Switch, Route
+  BrowserRouter as Router,
+  Switch
 } from 'react-router-dom';
-import { PublicRoute } from './PublicRoute';
 
-import { MainPage } from '../../pages/Main/MainPage';
-import { NotFoundPage } from '../../pages/NotFound/NotFoundPage';
+import { DashboardRouter } from './DashboardRouter';
+import { PublicRoute } from './PublicRoute';
 
 export const AppRouter = () => {
   return (
     <Router>
-      <>
+      <div className="wrapper">
         <Switch>
-          <PublicRoute exact path="/" component={ MainPage } />
-
-          <Route component={ NotFoundPage } />
+          <PublicRoute trackPath={ false } path="/" component={ DashboardRouter } />
         </Switch>
-      </>
+      </div>
     </Router>
   )
 }

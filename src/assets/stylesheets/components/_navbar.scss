@@ -1,0 +1,47 @@
+.navbar {
+  --footer-size: 0;
+
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr var(--footer-size);
+  grid-template-areas: "nav"
+                       "footer";
+
+  &__nav {
+    border: 1px dashed yellow;
+
+    grid-area: nav;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .6rem;
+    padding: 2rem 0;
+
+
+    .navbar__item {
+      border: 1px solid transparent;
+      border-radius: 9999px;
+      padding: .5rem .35rem;
+      width: 70%;
+      text-align: center;
+      user-select: none;
+
+      &:hover {
+        background-color: var(--bgc-btn-hover);
+      }
+
+      &-active {
+        font-weight: bold;
+        color: var(--text-color-active);
+      }
+    }
+
+  }
+
+  &__footer {
+    grid-area: footer;
+    border: 1px dashed white;
+  }
+}

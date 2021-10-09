@@ -1,0 +1,19 @@
+.dashboard {
+  display: grid;
+  grid-template-columns: .2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'navbar content';
+  height: 100%;
+
+  &__navbar {
+    grid-area: navbar;
+    padding: 1rem;
+    border-right: 1px solid #f3f3f3;
+  }
+
+  &__content {
+    grid-area: content;
+    padding: 1rem;
+    border: 1px solid red;
+  }
+}
