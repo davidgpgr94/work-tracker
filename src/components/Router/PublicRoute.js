@@ -12,9 +12,9 @@ export const PublicRoute = ({ trackPath = true, component:Component, ...rest }) 
   }
 
   return(
-    <Route { ...rest }
-      component={ (props) => (<Component { ...props } />) }
-    />
+    <Route {...rest}>
+      <Component />
+    </Route>
   )
 }
 

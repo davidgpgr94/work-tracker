@@ -5,14 +5,13 @@ import { Redirect, Route } from 'react-router-dom';
 
 export const OnlyAnonymousRoute = ({ isAuthenticated, component:Component, redirectTo = '/', ...rest }) => {
   return (
-    <Route
-      { ...rest }
-      component={ (props) => (
+    <Route { ...rest }>
+      {
         (!isAuthenticated)
-          ? ( <Component {...props} /> )
-          : ( <Redirect to={ redirectTo } /> )
-      )}
-    />
+          ? <Component />
+          : <Redirect to={ redirectTo } />
+      }
+    </Route>
   )
 }
 
