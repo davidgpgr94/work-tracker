@@ -1,0 +1,80 @@
+@import url('https://unpkg.com/css.gg/icons/css/play-button.css');
+@import url('https://unpkg.com/css.gg/icons/css/play-pause.css');
+
+.current-work {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 4fr 1fr 1fr;
+  column-gap: 1rem;
+  align-items: center;
+  padding: 1rem 0;
+
+
+  &__inputs {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    .working-on {
+      flex-grow: 3;
+    }
+
+    .select-proejct-task {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      justify-content: space-between;
+
+      .select-project {
+        flex-grow: 2;
+      }
+
+      .select-task {
+        flex-grow: 1;
+      }
+    }
+  }
+
+  &__time {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__actions {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .current-work__action {
+      background-color: transparent;
+      border-width: 5px 1px 5px 1px;
+      border-color: transparent;
+      border-radius: 100%;
+      cursor: pointer;
+
+      i {
+        transform: scale(2);
+        color: var(--text-color);
+        transition: color .2s ease-in-out, transform .2s ease-in-out;
+      }
+
+      &:hover {
+        i {
+          color: var(--text-color-hover);
+          transform: scale(2.2);
+        }
+      }
+
+      &:active {
+        i {
+          color: var(--text-color-active);
+          transform: scale(3);
+        }
+      }
+    }
+  }
+
+}

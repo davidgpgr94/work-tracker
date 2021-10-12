@@ -15,5 +15,16 @@
     grid-area: content;
     padding: 1rem;
     border: 1px solid red;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 1fr;
+    grid-template-areas: "current-work"
+                         "dashboard-wrapper";
+
+    .dashboard__wrapper {
+      grid-area: dashboard-wrapper;
+      border: 1px solid white;
+    }
   }
 }

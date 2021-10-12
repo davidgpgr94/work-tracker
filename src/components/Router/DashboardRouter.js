@@ -8,6 +8,7 @@ import { MainPage } from '../../pages/Main/MainPage';
 
 import { Navbar } from '../Navbar/Navbar';
 import { NotFoundRoute } from './NotFoundRoute';
+import { CurrentWork } from '../CurrentWork/CurrentWork';
 
 export const DashboardRouter = () => {
   return (
@@ -16,11 +17,14 @@ export const DashboardRouter = () => {
         <Navbar />
       </aside>
       <main className="dashboard__content">
-        <Switch>
-          <PublicRoute path='/summary' component={ MainPage } />
+        <CurrentWork />
+        <div className="dashboard__wrapper">
+          <Switch>
+            <PublicRoute path='/summary' component={ MainPage } />
 
-          <NotFoundRoute />
-        </Switch>
+            <NotFoundRoute />
+          </Switch>
+        </div>
       </main>
     </div>
   )

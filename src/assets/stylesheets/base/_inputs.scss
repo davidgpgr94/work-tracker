@@ -1,0 +1,35 @@
+input {
+  background-color: transparent;
+  background-clip: padding-box;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-color);
+  padding: .375rem .75rem;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  appearance: none;
+  transition: box-shadow .2s ease-in-out, border-color .2s ease-in-out;
+
+  &:focus {
+    color: var(--text-color-active);
+    border-color: var(--border-color-active);
+    outline: 0;
+    box-shadow: 0 0 0 2px var(--border-color-active);
+  }
+}
+
+select {
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23b3b3b3' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right .75rem center;
+  background-size: 1rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-color);
+  padding: .375rem .75rem;
+
+  appearance: none;
+}

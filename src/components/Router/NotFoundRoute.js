@@ -3,6 +3,6 @@ import { PublicRoute } from './PublicRoute';
 
 export const NotFoundRoute = () => {
   return (
-    <PublicRoute trackPath={ false } component={ NotFoundPage } />
+    <PublicRoute path="*" trackPath={ false } component={ NotFoundPage } />
   )
 }
